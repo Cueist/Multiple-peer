@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script lang="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="/simple-peer/simplepeer.min.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+
+  <body>
+    <main style="display: inline-block">
+      <div id="videos" class="video-container">
+        <video id="localVideo" class="vid" autoplay muted></video>
+      </div>
+
+      <div class="buttons">
+        <button id="switchButton" class="settings" onclick="switchMedia()">
+          Switch Camera
+        </button>
+        <button id="muteButton" class="settings" onclick="toggleMute()">
+          Unmuted
+        </button>
+        <button id="vidButton" class="settings" onclick="toggleVid()">
+          Video Enabled
+        </button>
+      </div>
+    </main>
+  </body>
+
+  <script src="/js/main.js" lang="text/javascript"></script>
+  <script src="/src/app.js"></script>
+  <script src="/src/socketController.js"></script>
+</html>
